@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 points = np.array([
@@ -60,7 +59,8 @@ def plot_cube(rotated_points, title, filename):
     ax.set_zlabel('Z')
     ax.set_title(title)
     ax.view_init(elev=30, azim=45)  # Added view initialization
-    fig.savefig(filename)
+    plt.show()
+
     print(f"Plot saved as {filename}")
 
 # Plot X rotation
